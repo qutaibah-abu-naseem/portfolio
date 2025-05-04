@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#text-after::after{
+    position: absolute;
+    content: '';
+    width:0;
+    height: 2px;
+    left: 35%;
+    bottom: 0;
+    border-radius: 30px;
+    background-color:rgb(75, 159, 255);
+    transform:scaleX(1);
+}
+#text-after:hover:after{
+    width: 30%;
+    transform:scaleX(2);
+    transition: width 0.3s ease, transform 0.3s ease;
+}
+#text-after:hover{
+    color: rgb(104, 170, 245);
+}
+
+.focus::after{
+    position: absolute !important;
+    content: '' !important;
+    height: 2px !important;
+    left: 35% !important;
+    bottom: 0 !important;
+    border-radius: 30px !important;
+    background-color:rgb(75, 159, 255) !important;
+    width: 30% !important;
+}
