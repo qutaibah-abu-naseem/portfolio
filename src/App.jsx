@@ -11,7 +11,7 @@ export const api = createContext(null)
 const My_app = () => {
   return (
     <>
-      <div>
+      <div className="flex flex-col gap-5">
         <Main/>
       <Suspense fallback={<div style={{ textAlign: 'center', margin: '2rem' }}>Loading...</div>}>
         <About />
@@ -29,6 +29,7 @@ function App() {
   const [section,setsection]=useState('Home')
   const refhome=useRef(null);
   const refabout=useRef(null);
+  const refskill=useRef(null);
   const refcontact=useRef(null);
   const refproject=useRef(null);
   useEffect(() => {
@@ -39,7 +40,10 @@ function App() {
       scrollTarget = refhome.current.offsetTop - offset;
     } else if (section === "About" && refabout.current) {
       scrollTarget = refabout.current.offsetTop - offset;
-    } else if (section === "Project" && refproject.current) {
+    } else if (section === "Skills" && refskill.current) {
+      scrollTarget = refskill.current.offsetTop - offset;
+    }
+     else if (section === "Project" && refproject.current) {
       scrollTarget = refproject.current.offsetTop - offset;
     } else if (section === "Contact" && refcontact.current) {
       scrollTarget = refcontact.current.offsetTop - offset;
@@ -58,7 +62,8 @@ const value={
   refproject,
   refhome,
   refabout,
-  refcontact
+  refcontact,
+  refskill
 }
   return (
     <>

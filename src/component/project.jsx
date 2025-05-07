@@ -5,7 +5,7 @@ import { api } from '../App';
 const Project = () => {
     const context=useContext(api)
     return (
-        <div className="h-[fit-content] w-full mt-[100px]" ref={context.refproject}>
+        <div className="h-[fit-content] w-full mt-[200px]" ref={context.refproject}>
             <Typography variant="h4" className="text-center">Project</Typography>
             <div className="w-full md:w-[90%] mx-auto mt-[100px]">
                 <div className="p-2 flex flex-col items-center gap-3">

@@ -28,10 +28,9 @@ const My_card = ({ icon, text, title, ms }) => {
                     alignItems: 'center',
                     width: 'fit-content',
                     gap: 3,
-                    mb: 2
-                }}
+                    mb: 2                }}
             >
-                {icon}<p>{title}</p>
+                <p>{icon}</p><p>{title}</p>
             </Typography>
             <Typography>{text}</Typography>
         </Card>

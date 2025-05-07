@@ -1,8 +1,10 @@
 import { Card, Typography } from '@mui/material'
-import React from 'react'
+import React, { useContext } from 'react'
+import { api } from '../App'
 const Skill = () => {
+    const context=useContext(api)
     return (
-        <div className="w-100 h-[1000px] md:h-[100vh] my-[200px] " >
+        <div ref={context.refskill} className="w-100 h-[1000px] md:h-[100vh] my-[200px] " >
             <Typography variant="h4" sx={{ textAlign: 'center', my: 5 }}>skills</Typography>
             <div className="w-[90%] h-[100%] mx-auto flex justify-center mt-[100px]">
 
@@ -11,11 +13,11 @@ const Skill = () => {
                 </div>
 
 
-                <div className=" h-[400px] py-3 flex flex-col gap-5 mt-4">
+                <div className=" h-[400px] py-3 flex flex-col gap-[100px] mt-4">
 
                     <div className="flex flex-col md:flex-row items-center gap-5 md:gap-3">
                         <Typography variant='h5' className='w-[200px] flex'> Frontend skils <p className='hidden md:block'>={'>'}</p> </Typography>
-                        <Card sx={{ width: '400px', height: '150px', padding: '15px', backgroundColor: 'rgb(31, 29, 29)', borderRadius: '20px' }}>
+                        <Card sx={{ width: {xs:'90vw',sm:'400px'}, height:{xs:'auto',sm:'150px'} , padding: '15px', backgroundColor: 'rgb(31, 29, 29)', borderRadius: '20px' }}>
                             <Typography variant='h6' color='white'>
                                 HTML5
 
@@ -34,7 +36,7 @@ const Skill = () => {
 
                     <div className="flex flex-col md:flex-row items-center gap-5 md:gap-3">
                         <Typography variant='h5' className='w-[200px] flex'>Other Skills <p className='hidden md:block'>={'>'}</p></Typography>
-                        <Card sx={{ width: '400px', height: '150px', padding: '15px', backgroundColor: 'rgb(31, 29, 29)', borderRadius: '20px' }}>
+                        <Card sx={{ width: {xs:'90vw',sm:'400px'}, height:{xs:'auto',sm:'150px'}, padding: '15px', backgroundColor: 'rgb(31, 29, 29)', borderRadius: '20px' }}>
                             <Typography variant='h6' color='white'>
                             Git & GitHub
                                 VS Code /

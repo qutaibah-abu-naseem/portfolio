@@ -1,6 +1,6 @@
 import { IconButton, Typography } from '@mui/material'
 import React from 'react'
-import { FaFacebook, FaLinkedinIn} from 'react-icons/fa6'
+import { FaFacebook, FaLinkedinIn,FaWhatsapp} from 'react-icons/fa6'
 
 const Footer = () => {
     const pages=['-Linked In','-Facebook','-Github','-Our E-comerce']
@@ -28,17 +28,19 @@ const Footer = () => {
 
 
             <div>
-                <div className='p-3'>
+                <div className='p-3 flex flex-col items-center gap-5'>
                 <Typography variant='h5' color='white' >Follow Us</Typography>
-            <p className='mt-5 text-gray-100 text-[19px]'>
-            <IconButton color="primary" aria-label="add to shopping cart" onClick={()=>window.location.href='https://www.linkedin.com/in/for-work-188162357/'}>
-            <FaLinkedinIn className='text-gray-100 hover:text-sky-500 '/>
-</IconButton>
-<IconButton color="primary" aria-label="add to shopping cart"  onClick={()=>window.location.href='https://web.facebook.com/profile.php?id=61553706899823'}>
-<FaFacebook className='text-gray-100 hover:text-sky-500 '/>
-</IconButton>
-
-            </p>
+            <p className='mx-5 my-auto  '>
+                           <IconButton color="primary" aria-label="LinkedIn" onClick={() => window.location.href = 'https://www.linkedin.com/in/for-work-188162357/'}>
+                             <FaLinkedinIn className='text-gray-100 hover:text-sky-500 text-[20px] md:text-[23px]' />
+                           </IconButton>
+                           <IconButton color="primary" aria-label="Facebook" onClick={() => window.location.href = 'https://web.facebook.com/profile.php?id=61553706899823'}>
+                             <FaFacebook className='text-gray-100 hover:text-sky-500 text-[20px] md:text-[23px] ' />
+                           </IconButton>
+                           <IconButton color="primary" aria-label="Facebook" onClick={() => window.location.href = 'https://wa.me/962797917763'}>
+                             <FaWhatsapp className='text-gray-100 hover:text-sky-500 text-[20px] md:text-[23px]' />
+                           </IconButton>
+                         </p>
                 </div>
             </div>
             </div>

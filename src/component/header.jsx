@@ -13,7 +13,7 @@ import MenuItem from '@mui/material/MenuItem';
 import { api } from '../App';
 import { Avatar } from '@mui/material';
 
-const pages = ['Home', 'About', 'Project', 'Contact'];
+const pages = ['Home', 'About','Skills', 'Project', 'Contact'];
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -52,7 +52,7 @@ function Header() {
 
   return (
     <div className="w-100 flex justify-center">
-      <AppBar position="static" sx={{ backgroundColor: 'rgb(19, 17, 17)', position: 'fixed', zIndex: 30, borderRadius: "40px", maxWidth: shrink_header ? '350px' : '90%', transition: 'max-width 0.4s ease', scale: shrink_header ? '0.85' : '1', margin: '20px 0' }}>
+      <AppBar position="static" sx={{ backgroundColor: 'rgb(19, 17, 17)', position: 'fixed', zIndex: 30, borderRadius: "40px", maxWidth: shrink_header ? '400px' : '90%', transition: 'max-width 0.4s ease', scale: shrink_header ? '0.85' : '1', margin: '20px 0' }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             {!shrink_header && (
@@ -163,7 +163,7 @@ function Header() {
             </Box>
 
             {!shrink_header && (
-              <p className='mx-5 my-auto  '>
+              <p className='mx-5 my-auto hidden sm:block '>
                 <IconButton color="primary" aria-label="LinkedIn" onClick={() => window.location.href = 'https://www.linkedin.com/in/for-work-188162357/'}>
                   <FaLinkedinIn className='text-gray-100 hover:text-sky-500 text-[20px] md:text-[23px]' />
                 </IconButton>

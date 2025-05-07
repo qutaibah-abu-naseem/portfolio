@@ -17,21 +17,22 @@ const About = () => {
        
         },
         {
-            title:'My Aim',
-            icon:<MdComputer/>,
-            text:"I develop myself every day to become a world-class freelance developer, able to provide innovative software solutions, and generate a steady income that helps me build my future with confidence."
+            title:'How Start',
+            icon:<FaBrain/>,
+            text:'When I knew that I could develop myself through the Internet, I chose programming to learn. I learned for a while on my own, but without a plan. This is what made me join a front-end development course. Now I have the foundation and I build on it something new every day. I am not satisfied with the course alone.'
             , ms:'auto !important'
         },
         {
-            title:'What am I currently learning?',
-            icon:<FaBrain/>,
-            text:"I'm currently working on improving my react and ux skills, as well as building solid projects to add to my portfolio."
+            title:'My Aim',
+            icon:<MdComputer/>,
+            text:"I develop myself every day to become a world-class freelance developer, able to provide innovative software solutions, and generate a steady income that helps me build my future with confidence."
              , ms:'0'
         }, {
-            title:'Skills',
-            icon:<IoSettingsOutline/>,
-            text:"HTML, CSS, JavaScriptReact,Tailwind CSS, Bootstrap, Git,matrial ui,farmar motionUI/UX Basics – Figma"
-            , ms:'auto !important'        },
+            title: 'What Drives Me',
+            icon: <IoSettingsOutline />,
+            text: "I believe in consistency, curiosity, and purpose. I don’t just learn to code—I learn to solve problems, create value, and build tools that matter. I enjoy challenges and always aim to grow beyond my limits.",
+            ms: 'auto !important'       
+        },
     ]
     const context=useContext(api)
     return (
