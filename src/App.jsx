@@ -4,6 +4,7 @@ import { Skeleton } from "@mui/material";
 import Header from "./component/header";
 import Footer from "./component/footer";
 import Skill from "./component/skill";
+import Resume from "./component/resume";
 const About = lazy(() => import('./component/about'));
 const Project = lazy(() => import('./component/project'));
 const Contact = lazy(() => import('./component/contact'));
@@ -18,6 +19,7 @@ const My_app = () => {
         <Skill/>
         <Project />
         <Skeleton sx={{ backgroundColor: 'rgb(255, 255, 255)', height: '10px', width: '85%', margin: '0 auto', my: 5 }} animation={false} />
+        <Resume/>
         <Contact />
       </Suspense>
       </div>
@@ -32,6 +34,8 @@ function App() {
   const refskill=useRef(null);
   const refcontact=useRef(null);
   const refproject=useRef(null);
+  const refResume=useRef(null);
+
   useEffect(() => {
     const offset = 0;
     let scrollTarget = 0;
@@ -45,7 +49,9 @@ function App() {
     }
      else if (section === "Project" && refproject.current) {
       scrollTarget = refproject.current.offsetTop - offset;
-    } else if (section === "Contact" && refcontact.current) {
+    } else if (section === "Resume" && refResume.current) {
+      scrollTarget = refResume.current.offsetTop - offset;
+    }else if (section === "Contact" && refcontact.current) {
       scrollTarget = refcontact.current.offsetTop - offset;
     } else {
       return; 
@@ -63,7 +69,8 @@ const value={
   refhome,
   refabout,
   refcontact,
-  refskill
+  refskill,
+  refResume
 }
   return (
     <>
